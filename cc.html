@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://cdn.boxicons.com/3.0.6/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdn.boxicons.com/3.0.6/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="cc.css">
+    <!--<link rel="stylesheet" href="cprueba.css">-->
+</head>
+<body>
+    
+    <header id="header">
+        <div class="logo">
+            <div>
+                <img src="img/Copilot_20251214_071348.png" alt="">
+            </div>
+           
+            <div>
+                 <i class='bxr  bx-menu-close'></i> 
+            </div>
+        </div>
+        <div class="nav">
+            <nav>
+                <ul id="ulli">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Contact us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+
+        <div class="cajaPrincipal">
+        <div>
+            <div>
+                <h1 id="titilo" class="titulo">Card generade</h1>
+            </div>
+            <div>
+                <input type="text" name="" class="entradas" id="entrada" placeholder="Card number" min="16" maxlength="16">
+                    <p id="mensaje" class="mensajes"></p>
+            </div>
+            <div>
+                <input type="text" name="" class="entradas" id="entrada2" placeholder="Exp-Example: 11/26" maxlength="5">
+                <p id="mensaje3" class="mensajes"></p>
+            </div>
+
+            <div>
+                <input type="submit"  class="generar" value="Gen" onclick="Gen();">
+            </div>
+        </div>
+    </div>
+
+    <div class="caja">
+        <ul class="cajalista si">
+            <li id="cc"></li>
+        </ul>
+    </div>
+
+    </main>
+
+    <footer>
+        <div>
+             <p>&copy; Copy Right</p>
+        </div>
+        <div>
+            <p>@Card Generade</p>
+        </div>
+    </footer>
+
+    <script src="cc.js"></script>
+    <script src="validar.js"></script>
+    
+</body>
+</html>

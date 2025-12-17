@@ -1,0 +1,218 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("https://img.freepik.com/vector-gratis/lineas-dinamicas-fondo-estilo-papel_23-2149008629.jpg?semt=ais_hybrid&w=740&q=80");
+    margin: 0;
+    padding: 0;
+    width: 100%;   /* ocupa el ancho exacto de la ventana */  /* ocupa el alto exacto de la ventana */
+    overflow-x: hidden;
+}
+
+#header{
+    display: flex;
+    height: 100px;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+.bxr{
+    display: none;
+}
+
+
+.nav{
+    width: 70%;
+    height: 100px;
+}
+
+nav #ulli{
+    list-style-type: none;
+    width: 80%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ulli li{
+    padding-right: 0;
+    padding: 10px;
+}
+
+#ulli li a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 10px;
+}
+
+#ulli li::before{
+    content: "";
+    border: 1px solid black;
+}
+
+#ulli li:hover{
+    background: linear-gradient(75deg, red,green);
+}
+
+.logo img{
+    width: 150px;
+    height: 100px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+
+
+.titulo{
+    text-align: center;
+    margin: 10px;
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: gray;
+}
+
+.cajaPrincipal{
+    width: 350px;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+      background-color: #ffffff;
+    align-items: center;
+    border-radius: 6px;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.75);
+}
+
+.entradas{
+    width: 300px;
+    padding: 8px;
+    margin: 10px;
+    margin-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.generar{
+    width: 300px;
+    padding: 8px;
+    margin: 10px;
+    background-color: green;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.mensajes{
+    width: 300px;
+    
+    overflow: hidden;
+    flex-wrap: wrap;
+    color: rgb(173, 23, 23);
+}
+
+.caja{
+    width: 350px;
+    height: 400px;
+    overflow: auto;
+    border: 1px solid black;
+    margin: 0 auto;
+    background-color: #ffffff;
+    margin-top: 30px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.cajalista.si{
+    width: 300px;
+    margin-top: 10px;
+    
+    
+}
+
+#cc{
+    font-size: 18px;
+    padding-bottom: 8px;
+}
+
+footer{
+    width: 100%;
+    height: 150px;
+    background-color: rgba(194, 181, 181, 0.582);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer div{
+    margin: 20px;
+}
+
+
+
+@media screen and (min-width: 414px ) {
+    body{
+        width: 100%;
+        overflow-x: hidden;
+    }
+    #header{
+        width: 100%;
+        height: 80px;
+        display: block;
+    }
+    .logo{
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+    }
+    .logo img{
+         width: 100%;
+         height: 80px;
+    }
+    .bxr{
+        display: flex;
+        font-size: 40px;
+        margin-right: 10px;
+    }
+
+    nav #ulli{
+      display: block;
+      background-color: #fff;
+      margin-top: -10px;
+      width: 100%;
+      height: 124px;
+      position: absolute;
+    }
+    nav{
+        display: none;
+        width: 100%;
+    }
+
+    #ulli li{
+        border-bottom: 1px solid gray;
+    }
+
+    #ulli li::before{
+    content: "";
+    border: none;
+    }
+    .titulo{
+    }
+
+    
+    footer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+}
+
+
