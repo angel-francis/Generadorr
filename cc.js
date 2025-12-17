@@ -148,7 +148,7 @@ function Gen(){
     })*/
 
       for(let i=0;i<numero.length;i++){
-        cc.innerHTML += `${entrada.value} / ${numero[i]} / ${fecha.value} `;
+        cc.innerHTML += `${entrada.value} | ${numero[i]} | ${fecha.value} `;
         //console.log(`${entrada.value} / ${numero[i]} / ${fecha.value}`);
 
        //console.log(numero[i]);
