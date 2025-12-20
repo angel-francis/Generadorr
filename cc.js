@@ -153,6 +153,30 @@ generar.addEventListener('click', (e)=>{
     }
 })
 
+const car = document.getElementById("master");
+const carr = document.getElementById("visaa");
+const visas  = document.getElementsByClassName("visas");
+
+entrada.addEventListener('input',()=>{
+
+    if(entrada.value.startsWith(5)){
+        car.classList.remove("visas");
+        car.classList.add("visasss")
+        //alert("visa");
+    }else{
+         car.classList.remove("visasss");
+        car.classList.add("visas")
+    }
+    
+    if(entrada.value.startsWith(4)){
+        carr.classList.remove("visas");
+        carr.classList.add("visasss2");
+    }else{
+        carr.classList.remove("visasss2");
+         carr.classList.add("visas");
+    }
+})
+
 
 //mensaje
 let otro = [];
@@ -205,6 +229,7 @@ entrada.addEventListener('input',(e)=>{
 limpiar.addEventListener('click',(e)=>{
     if(cc.innerHTML === ``){
         alert("The list is empty");
+        
     }else{
         e.target.value = "Cleaning...";
         setTimeout(()=>{
