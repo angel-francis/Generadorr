@@ -264,7 +264,7 @@ footer div{
     .nav{
         width: 100%;
         background-color: #ffffff;
-        height: 126px;
+        height: 130PX;
         overflow: hidden;
         box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.25);
     }
@@ -278,6 +278,7 @@ footer div{
         width: 100%;
         position: absolute;
     }
+
     nav #ulli{
         display: block;
         width: 100%;
