@@ -138,13 +138,14 @@ const limpiar = document.getElementById("limpiar");
 const generar = document.getElementById("generar");
 
 generar.addEventListener('click', (e)=>{
-    if(entrada.value === "" && fecha.value === ""){
+    if(entrada.value === ""){
         e.target.value = "Gen";
         mensaje.innerHTML = "Dijite una tarjeta";
-        mensaje3.innerHTML = "Dijite una fecha";
+    }else if(fecha.value === ""){
+         mensaje3.innerHTML = "Dijite una fecha";
     }else if(!entrada.value.startsWith(4) && !entrada.value.startsWith(5)){
         mensaje.innerHTML = "Solo se aceptan tarjetas visa o mastercad";
-    }else if(entrada.value.length < 13 || entrada.value.length < 14){
+    }else if(entrada.value.length <= 13 || entrada.value.length <= 14){
         mensaje.innerHTML = "solo se aceptan de 15 a 16 dijitos";
     }else if(fecha.value.slice(0,2) >=13){
         mensaje3.innerHTML = "el mes no puede ser superior a 12";
