@@ -219,8 +219,6 @@ function Gen(){
 fecha.addEventListener('input',(e) =>{
        if(e.target.value.length ===2){
         e.target.value = e.target.value + "/";
-       }else if(e.target.value < 2){
-        e.target.value = e.target.value -  "/";
        }else{
         e.target.value - "/";
        }

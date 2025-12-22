@@ -8,8 +8,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-     /*background-color: #003366;*/
-    width: 100%;   /* ocupa el ancho exacto de la ventana */  /* ocupa el alto exacto de la ventana */
+    width: 100%; 
     overflow-x: hidden;
 }
 
@@ -67,14 +66,14 @@ nav #ulli{
      width: 30px;
      height: auto;
      margin: 10px;
-     opacity: 90%;
+     opacity: 100%;
 }
 
 .visasss2{
      width: 30px;
      height: auto;
      margin: 10px;
-     opacity: 90%;
+     opacity: 100%;
 }
 
 
@@ -242,6 +241,7 @@ footer div{
     }
     #main{
         margin-top: 110px;
+        position: relative;
     }
     .logo{
        overflow: hidden;
@@ -262,11 +262,9 @@ footer div{
     }
 
     .nav{
-        position: fixed;
-        z-index: 1000;
         width: 100%;
         background-color: #ffffff;
-        height: 120px;
+        height: 124px;
         overflow: hidden;
         box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.25);
     }
