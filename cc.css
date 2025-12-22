@@ -117,7 +117,7 @@ nav #ulli{
     background-color: #ffffff;
     align-items: center;
     border-radius: 6px;
-    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.75);
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.30);
 }
 
 
@@ -230,6 +230,7 @@ footer div{
     body{
         width: 100vw;
         height: 100vh;
+        background-color: #f1f0ee;
     }
     #header{
         width: 100%;
@@ -238,6 +239,7 @@ footer div{
         top: 0;
         position: fixed;
         z-index: 1000;
+        background-color: #f1f0ee;
     }
     #main{
         margin-top: 110px;
@@ -263,7 +265,7 @@ footer div{
 
     .nav{
         width: 100%;
-        background-color: #ffffff;
+        background-color: #f1f0ee;
         height: 130PX;
         overflow: hidden;
         box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.25);

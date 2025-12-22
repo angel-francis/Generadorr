@@ -306,6 +306,14 @@ const overlay = document.getElementById("overlay");
     }
   });
 
+  overlay.addEventListener('click',()=>{
+     if(ulli.style.display === "flex" && overlay.style.display === "flex"){
+         ulli.style.display = "none";
+        overlay.style.display = "none";
+     }
+
+  })
+
 
 
 /*bxr.addEventListener('click', () => {
