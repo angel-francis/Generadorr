@@ -138,8 +138,13 @@ const limpiar = document.getElementById("limpiar");
 const generar = document.getElementById("generar");
 
 generar.addEventListener('click', (e)=>{
-    if(entrada.value === "" && fecha.value === ""){
+    if(entrada.value === ""){
         e.target.value = "Gen";
+        mensaje.innerHTML = "Dijite una tarjeta";
+    }else if(!entrada.value.startsWith(4) && !entrada.value.startsWith(5)){
+        mensaje.innerHTML = "Solo se aceptan tarjetas visa o mastercad";
+    }else if(entrada.value.length < 13 || entrada.value.length < 14){
+        mensaje.innerHTML = "solo se aceptan de 15 a 16 dijitos";
     }else{
          e.target.value = "generading...";
         generar.classList.remove("generar");
@@ -147,11 +152,18 @@ generar.addEventListener('click', (e)=>{
         setTimeout(()=>{
               generar.classList.remove("x");
                 generar.classList.add("generar");
-            e.target.value = "Gen";
+                e.target.value = "Gen";
             Gen();
+            LimpiarMensajes();
         },200);
     }
 })
+
+
+function LimpiarMensajes(){
+    mensaje.innerHTML = "";
+    mensaje3.innerHTML = "";
+}
 
 const car = document.getElementById("master");
 const carr = document.getElementById("visaa");
@@ -207,13 +219,15 @@ function Gen(){
 fecha.addEventListener('input',(e) =>{
        if(e.target.value.length ===2){
         e.target.value = e.target.value + "/";
+       }else if(e.target.value < 2){
+        e.target.value = e.target.value -  "/";
        }else{
         e.target.value - "/";
        }
 })
 
 
-entrada.addEventListener('input',(e)=>{
+/*entrada.addEventListener('input',(e)=>{
     if(isNaN(e.target.value)){
         mensaje.innerHTML = "solo se aceptan numeros";
     }else if(e.target.value < 16){
@@ -224,7 +238,7 @@ entrada.addEventListener('input',(e)=>{
         mensaje.innerHTML = "";
     }
 
-})
+})*/
 
 limpiar.addEventListener('click',(e)=>{
     if(cc.innerHTML === ``){
@@ -274,19 +288,23 @@ logo.addEventListener('click',()=>{
     
 })*/
 
-const bxr = document.getElementsByClassName("bxr");
-const ulli = document.querySelector("nav");
+const bxr = document.getElementById("klk");
+const ulli = document.getElementById("navv");
+const overlay = document.getElementById("overlay");
 
-Array.from(bxr).forEach(bxr => {
+
+
   bxr.addEventListener('click', () => {
     if(ulli.style.display === "none"){
          ulli.style.display = "flex";
+         overlay.style.display = "flex";
     }else{
             ulli.style.display = "none";
+            overlay.style.display = "none";
     }
-  
   });
-});
+
+
 
 /*bxr.addEventListener('click', () => {
     if(ulli.style.display === "none"){
@@ -300,4 +318,3 @@ Array.from(bxr).forEach(bxr => {
 /*bxr.addEventListener("click",()=>{
     alert("Hola");
 })*/
-
