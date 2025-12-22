@@ -297,10 +297,19 @@ footer div{
 
     #main{
         width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .cajaDespues{
+        width: 100%;
+        display: inline-block;
+        align-items: center;
+        justify-content: center;
     }
     .cajaPrincipal{
         width: 95%;
-    
+        margin-inline-start: 7px;
     }
     .titulo{
         font-size: 30px;
@@ -334,6 +343,7 @@ footer div{
     
     .caja{
         width: 95%;
+        margin-inline-start: 7px;
     }
     .cajalista.si{
         width: 90%;
