@@ -190,7 +190,7 @@ nav #ulli{
 }
 
 .cajalista.si{
-    width: 300px;
+    max-width: 300px;
     margin-top: 10px;
     margin-left: 10px;
 }
