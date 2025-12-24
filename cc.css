@@ -120,6 +120,10 @@ nav #ulli{
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.30);
 }
 
+.cajaDespues{
+
+}
+
 
 .entradas{
     width: 300px;
@@ -187,6 +191,7 @@ nav #ulli{
     color: rgb(173, 23, 23);
 }
 
+
 .caja{
     width: 350px;
     height: 400px;
@@ -200,14 +205,43 @@ nav #ulli{
 }
 
 .cajalista.si{
-    max-width: 300px;
+    max-width: 350px;
     margin-top: 10px;
     margin-left: 10px;
+}
+
+
+.nuevo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    margin-left: 10px;
+}
+
+#cantidad{
+    width: 140px;
+    padding: 8px;
+}
+
+#cvvPersonalizado{
+    width: 140px;
+    padding: 8px;
+       background-color: orange;
+       border: none;
+       border-radius: 6px;
+       font-weight: bold;
 }
 
 #cc{
     font-size: 18px;
     padding-bottom: 8px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    text-align: center;
+   
 }
 
 footer{
@@ -308,6 +342,7 @@ footer div{
         display: inline-block;
         align-items: center;
         justify-content: center;
+        
     }
     .cajaPrincipal{
         width: 95%;
@@ -352,6 +387,33 @@ footer div{
         font-weight: bold;
         margin-left: 10px;
     }
+
+    .cajaPrincipal .aja{
+        margin: 0 auto; 
+        max-width: 98%; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+    }
+    .nuevo{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        }
+
+    .nuevo div{
+    }
+
+    #cantidad{
+       width: 100%;
+       font-size: 15px;
+    }
+
+    #cvvPersonalizado{
+       width: 100%;
+       font-size: 15px;
+    }
+
 
     .titulo{
     }
