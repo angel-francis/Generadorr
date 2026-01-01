@@ -89,7 +89,10 @@ nav #ulli{
     border: 1px solid black;
 }
 
-
+#ulli li:first-child::before { 
+    content: none; 
+    border: none;
+ }
 
 .logo img{
     width: 150px;
@@ -224,6 +227,22 @@ nav #ulli{
     padding: 8px;
 }
 
+.cvv{
+     width: 140px;
+    padding: 8px;
+    margin-left: 10px;
+    margin-top: 8px;
+    display: none;
+}
+
+.cvvvv{
+     width: 140px;
+    padding: 8px;
+    margin-left: 10px;
+    margin-top: 8px;
+    display: flex;
+}
+
 #cvvPersonalizado{
     width: 140px;
     padding: 8px;
@@ -231,6 +250,7 @@ nav #ulli{
        border: none;
        border-radius: 6px;
        font-weight: bold;
+       color: #ffffff;
 }
 
 #cc{
@@ -241,7 +261,6 @@ nav #ulli{
     align-items: center;
     justify-content:space-between;
     text-align: center;
-   
 }
 
 footer{
@@ -331,6 +350,7 @@ footer div{
     border: none;
     }
 
+
     #main{
         width: 100%;
         display: flex;
@@ -367,6 +387,13 @@ footer div{
         padding: 10px;
         font-size: 15px;
     }
+
+    div .cvv{
+        width: 193px;
+        margin-left: 20px;
+        font-size: 15px;
+}
+
 
     .generar{
         width: 98%;

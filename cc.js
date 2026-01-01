@@ -11,9 +11,22 @@ const cantidad = document.getElementById("cantidad");
 const cc = document.getElementById("cc");
 
 const cvvp =  document.getElementById("cvvPersonalizado");
+const cvvv =  document.getElementById("cvv");
+
+const cvvvv = document.getElementsByClassName("cvvvv");
+const cv = document.getElementsByClassName("cvv");
+
+
+
 
 cvvp.addEventListener('click',()=>{
-    alert("En proceso");
+    const estado = window.getComputedStyle(cvvv).display;
+
+    if(estado === "" || estado === "none"){
+        cvvv.style.display = "flex"
+    }else{
+         cvvv.style.display = "none";
+    }
 })
 
 const limpiar = document.getElementById("limpiar");
@@ -32,8 +45,10 @@ generar.addEventListener('click', (e)=>{
         mensaje.innerHTML = "solo se aceptan bin de 6 dijitos";
     }else if(fecha.value.slice(0,2) >=13){
         mensaje3.innerHTML = "el mes no puede ser superior a 12";
-    }else if(cantidad.value > 5000){
+    }else if(cantidad.value >= 5000){
         alert(`La cantidad no puede ser superior a 5000`);
+    }else if(cvvv.value.length < 3){
+        alert("Dijite un CVV valido");
     }else{
          e.target.value = "generading...";
         generar.classList.remove("generar");
@@ -43,9 +58,7 @@ generar.addEventListener('click', (e)=>{
                 generar.classList.add("generar");
                 e.target.value = "Gen";
             Gen();
-            //Iterar();
             LimpiarMensajes();
-            //LimpiarCampos();
         },200);
     }
 })
@@ -60,8 +73,8 @@ const car = document.getElementById("master");
 const carr = document.getElementById("visaa");
 const visas  = document.getElementsByClassName("visas");
 
-entrada.addEventListener('input',()=>{
-
+entrada.addEventListener('input',(e)=>{
+     let valor = e.target.value.replace(/\D/g, "");
     if(entrada.value.startsWith(5)){
         car.classList.remove("visas");
         car.classList.add("visasss")
@@ -78,6 +91,8 @@ entrada.addEventListener('input',()=>{
         carr.classList.remove("visasss2");
          carr.classList.add("visas");
     }
+
+    e.target.value = valor;
 })
 
 
@@ -86,8 +101,6 @@ let cvv = [];
 
 
 function Gen(){
-
-//cc.innerHTML = ``;
     lista = [];
     cvv = [];
     for (let i = 0; i < cantidad.value; i++) {
@@ -96,48 +109,34 @@ function Gen(){
     lista.push(n);
     cvv.push(m);
 }
-
-    /*.forEach(elemento =>{
-        cc.innerHTML += `<li>${entrada.value} / ${elemento} / ${fecha.value}</li>`;
-    })*/
-      //Este es el bucle que utilice
-     /* for(let i=0;i<numero.length;i++){
-        cc.innerHTML += `${entrada.value} | ${numero[i]} | ${fecha.value} `;
-        //console.log(`${entrada.value} / ${numero[i]} / ${fecha.value}`);
-
-       //console.log(numero[i]);
-      }
     
-       //obj.filter(k => console.log(`${k.entrada} ${k.fecha}`))*/
      let html = ``;
-    let conteo = 0;
-  for (let i = 0; i < cantidad.value; i++) {
-    //console.log(`${bin.value}${lista[i]} / ${cvv[i]}`)
-     conteo ++;
+     if(cvvv.value.trim() !== "" && cvvv.value.length === 3){
+          for (let i = 0; i < cantidad.value; i++) {
+    html += `${Number(entrada.value)}${lista[i]} | ${cvvv.value} | ${fecha.value} `;
+}
+     }else{
+          for (let i = 0; i < cantidad.value; i++) {
     html += `${Number(entrada.value)}${lista[i]} | ${cvv[i]} | ${fecha.value} `;
-    //console.log(`${Number(entrada.value)}${lista[i]} | ${cvv[i]} | ${fecha.value}`)
-    //console.log(typeof(Number(entrada.value)))
 }
+     }
+
     cc.innerHTML = html;
-       //Iterar();
-      //LimpiarCampos();
+
 }
 
-/*function Iterar(){
-    let html = ``;
-    let conteo = 0;
-  for (let i = 0; i < cantidad.value; i++) {
-    //console.log(`${bin.value}${lista[i]} / ${cvv[i]}`)
-     conteo ++;
-    //html += `${Number(entrada.value)}${lista[i]} | ${cvv[i]} | ${fecha.value} `;
-    console.log(`${Number(entrada.value)}${lista[i]} | ${cvv[i]} | ${fecha.value}`)
-    //console.log(typeof(Number(entrada.value)))
-}
-    cc.innerHTML = html;
-}*/
 
 
+cvvv.addEventListener('input',(e)=>{
+    let valor = e.target.value.replace(/\D/g, "");
 
+    e.target.value = valor
+})
+
+cantidad.addEventListener('input',(e)=>{
+     let valor = e.target.value.replace(/\D/g, "");
+     e.target.value = valor;
+})
 
 
 
@@ -178,7 +177,8 @@ const overlay = document.getElementById("overlay");
 
 
   bxr.addEventListener('click', () => {
-    if(ulli.style.display === "none"){
+    const estado =  window.getComputedStyle(ulli).display;
+    if(estado ===  "" || estado === "none"){
          ulli.style.display = "flex";
          overlay.style.display = "flex";
     }else{
