@@ -47,8 +47,6 @@ generar.addEventListener('click', (e)=>{
         mensaje3.innerHTML = "el mes no puede ser superior a 12";
     }else if(cantidad.value >= 5000){
         alert(`La cantidad no puede ser superior a 5000`);
-    }else if(cvvv.value.length < 3){
-        alert("Dijite un CVV valido");
     }else{
          e.target.value = "generading...";
         generar.classList.remove("generar");
